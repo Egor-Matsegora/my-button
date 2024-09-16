@@ -27,14 +27,11 @@ jobs:
 
       - name: Build library
         run: npm run build
-
-#      - name: Check git status
-#        run: git status
 #
-#      - name: Bump version
-#        run: npm version patch
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Bump version
+        run: npm version patch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to npm
         run: npm run publish:npm
