@@ -27,7 +27,14 @@ jobs:
 
       - name: Build library
         run: npm run build
-#
+
+      - name: Commit changes if needed
+        run: |
+          git config --global user.email "yegor.matsegora@gmail.com"
+          git config --global user.name "Egor-Matsegora"
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Auto-commit changes before version bump"
+
       - name: Bump version
         run: npm version patch
         env:
