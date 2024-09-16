@@ -7,7 +7,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build": "ng build",
-    "version": "npm version patch",
     "publish:npm": "npm publish --access public"
   },
   "private": false,
