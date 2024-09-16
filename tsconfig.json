@@ -9,6 +9,11 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
+    "paths": {
+      "ng-my-button": [
+        "./dist/ng-my-button"
+      ]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
