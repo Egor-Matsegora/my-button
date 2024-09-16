@@ -3,10 +3,10 @@ name: Build and Publish to npm
 on:
   push:
     branches:
-      - main  # Запуск действия при каждом пуше в ветку main
+      - master
   pull_request:
     branches:
-      - main  # Также можно запускать при pull request в main
+      - master
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '18'
           registry-url: 'https://registry.npmjs.org/'
 
       - name: Install dependencies
